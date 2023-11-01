@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 // removefile
-//fs.unlink('readme2.md');
+fs.unlink('readme2.md');
 
 // create directory
 //fs.mkdirSync('stuff');

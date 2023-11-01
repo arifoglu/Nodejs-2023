@@ -1,8 +1,8 @@
 var fs = require('fs');
 
 // fs readfile
-//var readme = fs.readFileSync('readme.md','utf8');
-//console.log(readme);
+// var readme = fs.readFileSync('readme.md','utf8');
+// console.log(readme);
 
 // fs writefile
 // var readme2 =fs.writeFileSync('readme2.md',readme)
