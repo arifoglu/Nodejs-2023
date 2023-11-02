@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ #container_form{
+     border: 1px #f0efef;
+     width: 200px;
+     height: 500px;
+     margin: auto;
+     margin-top: 50px;
+     background-color: #f0efef;
+ }
+ div{
+     margin-bottom: 2px;
+     margin-left: 25px;
+     margin-right: 25px;   
+ }
+ input{
+     border-radius: 5px;
+     width: 150px;
+     height: 30px;
+     padding-left: 5px;
+ }
+ input[type=datetime-local]{
+     opacity: 0.5;
+ }
+ input[type=number]{
+     opacity: 0.5;
+ }
+ h2,h3,h4,h5{
+ padding-top: 15px;
+ margin-bottom: 10px;
+ text-decoration: rgb(44, 44, 44);
+ font-size:14px;
+ }
+ button{
+     width: 150px;
+     height: 30px;
+     border-radius: 5px;
+     background-color: #d5d2d2;
+     border: none;
+     margin-bottom: 2px;
+     text-align: left;
+     padding-left: 10px;
+     opacity: 0.7;
+     cursor: pointer;
+ }
+ button:hover{
+     background-color:white;
+     border: 1px solid;
+ }
+ span{
+     padding-left: 10px;
+ }
+ button[type=submit]{
+     background-color: rgb(38, 203, 38);
+     text-align: left;
+     padding-left: 12px;
+     color: #f0efef; 
+ }
+    </style>
+</head>
+
+<body>
+    <div id="container_form">
+        <form action="">
+            <div>
+                <h2>Taille:(<output id="range_weight_disp"></output>)</h2>
+                <label for="taux"></label>
+                <input type="range" id="range_weight" name="weight" min="0" max="50" value="15"
+                    oninput="range_weight_disp.value=range_weight.value">
+            </div><br>
+            <div>
+                <h3>Quantité <output id="display_numero"></output></h3>
+                <label for="numbers"></label>
+                <input type="number" value="2" id="numero" oninput="display_numero.value=numero.value">
+            </div><br>
+            <div>
+                <h4>Date de Livraison</h4>
+                <input type="datetime-local" value="">
+            </div><br><br>
+            <div>
+                <h5>Mode de paiment</h5>
+                <button type="button" onclick="alert('there is no cart')"><i class="fa-regular fa-credit-card fa-xm"
+                        style="color: #181616;"></i><span>Carte de
+                        crédit</span></button><br>
+                <button type="button" onclick="alert('paypal is invalid')"><i
+                        class="fa-brands fa-paypal fa-xl"></i><span>Paypal</span></button><br>
+                <button type="button" onclick="alert('email does not exist')"><i
+                        class="fa-solid fa-envelope fa-xm"></i><span>Facture par e-mail</span></button><br><br>
+                <button type="submit" onclick="alert('js code is necessaire')">Envoyer</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/ef5a662847.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

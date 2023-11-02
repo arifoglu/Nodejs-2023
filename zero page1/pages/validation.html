@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        *,
+        *:after,
+        *::before {
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font: inherit;
+        }
+
+        #container_form {
+            width: 300px;
+            height: 350px;
+            border: none;
+            margin: auto;
+            background-color: rgb(225, 225, 225);
+        }
+
+        div {
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+
+        div #top {
+            padding-top: 20px;
+        }
+
+        /* input email */
+        input[type="email"] {
+            width: 200px;
+            height: 40px;
+            margin-top: 5px;
+            font-size: 16px #000000;
+            border: 1px solid;
+            border-radius: 4px;
+            padding: 10px 6px;
+            background: url("/exercices_emploilausanne/images/enveloppe.png") 165px;
+            /* url("/exercices_emploilausanne/images/tick2.png") 135px */
+            background-repeat: no-repeat;
+            background-size: 25px 20px;
+            background-color: white;
+        }
+
+        label[for="email"] {
+            font-size: 16px;
+            color: #000000;
+        }
+
+        span {
+            color: #989898;
+        }
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: none;
+            font-weight: bold;
+            font-size: 12.8px;
+            margin-left: 45px;
+            color: #bc4b46;
+        }
+
+        /* validation  */
+        input[type="email"]:not(:focus):not(:placeholder-shown):invalid {
+            border-color: red;
+        }
+
+        input[type="email"]:not(:focus):not(:placeholder-shown):invalid~.error-message {
+            display: block;
+        }
+
+        input[type="email"]:not(:focus):not(:placeholder-shown):valid {
+            border-color: green;
+        }
+
+        h5 {
+            font-size: 12.8px;
+            color: #989898;
+            margin-bottom: 20px;
+        }
+
+        /* input password */
+        input[type="password"] {
+            width: 200px;
+            height: 40px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            border-radius: 4px;
+            padding-left: 10px;
+            letter-spacing: 6px;
+            background: url("/htmlactivite/images/locked.png") no-repeat;
+            background-position: right;
+            background-color: white;
+            border: 1px solid;
+        }
+
+        a {
+            color: #3483C5;
+            font-size: 12.8px;
+        }
+
+        label[for="password"] {
+            font-size: 16px;
+            color: #000000;
+            letter-spacing: 1px;
+        }
+
+        /* button */
+        button {
+            margin-left: 50px;
+            margin-top: 20px;
+            width: 200px;
+            height: 40px;
+            background-color: #59B955;
+            text-align: left;
+            padding-left: 10px;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container_form">
+        <form action="">
+            <div id="top">
+                <label for="email">Adresse <span>e-mail</span> </label><br>
+                <input type="email" id="email" class="email" required placeholder="enter e-mail">
+                <span class="tick"></span><br>
+                <p class="error-message">Veulliez remplir ce champ</p>
+                <h5>Votre adresse ne sera récupérée <br> ou exploitée </h5>
+            </div>
+            <div>
+                <label for="password">Mot de passe</label><br>
+                <input title="Doit contenir au moins 8 caractères" type="password" id="password" required><br>
+                <a href="/404.html" target="_blank">Mot de passe publié?</a>
+            </div>
+            <button onclick="alert('attention')">Se connecter</button>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/ef5a662847.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
