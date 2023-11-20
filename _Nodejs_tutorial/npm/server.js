@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const _ = require("lodash");
 
+
 const server = http.createServer((req,res)=>{
     // console.log("request made");
     // console.log(req.url,req.method);
@@ -9,7 +10,6 @@ const server = http.createServer((req,res)=>{
     //lodash
     const num = _.random(0,18);
     console.log(num);
-
     
     // set header content type whatever we want we can add
     res.setHeader("Content-Type","text/html");
